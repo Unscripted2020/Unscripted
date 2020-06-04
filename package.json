@@ -18,7 +18,8 @@
   "homepage": "https://github.com/Unscripted2020/Unscripted#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "mongoose": "^5.9.17"
+    "mongoose": "^5.9.17",
+    "pbkdf2-password": "^1.2.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.4"
