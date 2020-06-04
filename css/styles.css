@@ -60,6 +60,9 @@ body {
 
 .carousel-caption {
   color: black;
+  font-size: 128px;
+  margin-left: 550px;
+  margin-bottom: 80px;
 }
 
 .carousel .carousel-item {
@@ -94,4 +97,8 @@ body {
 
 .modal-body {
   background: #c7d2d5;
+}
+
+#searchBar {
+  margin-right: 30px;
 }
