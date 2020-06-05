@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = 3000;
+const port = 5000;
 //db
 const mongoose = require('mongoose');
 require("./db.js");//call connection to db and load models

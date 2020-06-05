@@ -4,7 +4,10 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon server/app.js"
+    "start": "node server/app.js",
+    "server": "nodemon server/app.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\" "
   },
   "repository": {
     "type": "git",
@@ -17,6 +20,7 @@
   },
   "homepage": "https://github.com/Unscripted2020/Unscripted#readme",
   "dependencies": {
+    "concurrently": "^5.2.0",
     "express": "^4.17.1",
     "mongoose": "^5.9.17",
     "pbkdf2-password": "^1.2.1"
