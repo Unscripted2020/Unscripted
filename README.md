@@ -7,19 +7,19 @@ The web app uses [npm](https://www.npmjs.com/get-npm) as an application level de
 $ npm install
 ```
 
-Once the dependencies are installed run the Server on localhost:5000 by typing:
+Once the dependencies are installed, run the Server on localhost:5000 by typing:
 
 ```
 $ npm start
 ```
 
-Otherwise run just the Client on localhost:3000 by typing:
+Otherwise, run just the Client on localhost:3000 by typing:
 
 ```
 $ npm run client
 ```
 
-Otherwise to run both the Client and the Server type:
+Otherwise, to run both the Client and the Server type:
 
 ```
 $ npm run dev
