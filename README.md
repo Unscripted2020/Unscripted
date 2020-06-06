@@ -1,6 +1,6 @@
 # Unscripted
 
-## Building and Testing | Server/Client
+## Building and Testing
 The web app uses [npm](https://www.npmjs.com/get-npm) as an application level dependency manager. Our dependencies can be installed with npm by typing:
 
 ```
@@ -13,7 +13,7 @@ Once the dependencies are installed run the server on localhost:5000 by typing:
 $ npm start
 ```
 
-Otherwise run just the clien on localhost:3000 by typing:
+Otherwise run just the client on localhost:3000 by typing:
 
 ```
 $ npm run client
