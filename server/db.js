@@ -1,6 +1,6 @@
 require("dotenv").config() 
 const mongoose = require('mongoose');
-const url = process.env.mongodburl
+const url = process.env.MONGODBURL
 
 const User = new mongoose.Schema({
   username: {
