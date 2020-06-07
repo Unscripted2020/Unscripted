@@ -1,13 +1,7 @@
 # Unscripted
 
 ## Building and Testing
-The web app uses [npm](https://www.npmjs.com/get-npm) as an application level dependency manager. Our dependencies can be installed with npm by going into the "client" folder and typing:
-
-```
-$ npm install
-```
-
-Once the Client dependencies are installed, install the Server dependencies by going into the "server" folder and typing:
+The web app uses [npm](https://www.npmjs.com/get-npm) as an application level dependency manager. Our dependencies can be installed with npm by going into the "client" folder and typing:(also type this command into server folder)
 
 ```
 $ npm install
