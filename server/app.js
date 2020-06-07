@@ -12,7 +12,7 @@ app.get('/', (req,res) => {
 	res.send("connected to app")
 })
 
-app.get('/login', (req, res) => {
+app.post('/login', (req, res) => {
 	const username = "username";
 	const password  = "password";
 	let err = '';
