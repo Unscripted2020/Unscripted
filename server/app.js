@@ -12,7 +12,7 @@ app.get('/', (req,res) => {
 	res.send("connected to app")
 })
 
-app.post('/create-account', (req, res) => {
+app.get('/create-account', (req, res) => {
 	const username = "username";
 	const password  = "password";
 	const confirmPassword = "password";

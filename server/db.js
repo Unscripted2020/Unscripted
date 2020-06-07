@@ -1,5 +1,6 @@
+require("dotenv").config() 
 const mongoose = require('mongoose');
-const url = "mongodb://localhost:27017/unscripted"
+const url = process.env.mongodburl
 
 const User = new mongoose.Schema({
   username: {
