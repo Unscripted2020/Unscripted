@@ -20,11 +20,16 @@
   },
   "homepage": "https://github.com/Unscripted2020/Unscripted#readme",
   "dependencies": {
+    "bootstrap": "^4.5.0",
     "concurrently": "^5.2.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "font-awesome": "^4.7.0",
+    "fontawesome": "^5.6.3",
+    "jquery": "^3.5.1",
     "mongoose": "^5.9.17",
-    "pbkdf2-password": "^1.2.1"
+    "pbkdf2-password": "^1.2.1",
+    "popper": "^1.0.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.4"
