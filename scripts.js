@@ -1,3 +1,5 @@
+let courses = [0, 1, 2];
+
 $(document).ready(function(){
     $("#loginButton").click(function(){
         $("#loginModal").modal('show');
@@ -16,6 +18,18 @@ $(document).ready(function(){
     });
     $("#formCancel").click(function(){
         $("#formModal").modal('hide');
+    });
+    $("#course-1-close").click(function(){
+        $("#course-1").addClass('d-none');
+    });
+    $("#course-2-close").click(function(){
+        $("#course-2").addClass('d-none');
+    });
+    $("#course-3-close").click(function(){
+        $("#course-3").addClass('d-none');
+    });
+    $("#search-button").click(function(){
+        
     });
     $("#mycarousel").carousel({interval: 2000});
     $("#carouselButton").click(function(){
