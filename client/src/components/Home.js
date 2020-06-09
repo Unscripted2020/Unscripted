@@ -1,12 +1,21 @@
 import React from 'react';
+//css libs
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import '../../node_modules/font-awesome/css/font-awesome.min.css';
 import '../../node_modules/bootstrap-social/bootstrap-social.css'
-import '../../node_modules/jquery/dist/jquery.slim.min.js'
+//css
 import '../App.css';
+//js
+import '../../node_modules/jquery/dist/jquery.slim.min.js'
 import '../../node_modules/popper.js/dist/umd/popper.min.js';
 import "../../node_modules/bootstrap/dist/js/bootstrap.min.js";
 import $ from 'jquery';
+//NavBar
+import NavBar from './Navbar';
+//footer
+import Footer from './Footer';
+//sign in modal
+import SignIn from './SignIn';
 
 class Home extends React.Component{
   // myFunction(navbar, sticky) {
@@ -78,72 +87,8 @@ class Home extends React.Component{
   render(){
     return(
       <div>
-      <nav class = "navbar navbar-dark navbar-expand-sm fixed-top">
-          <div class = "container">
-              <button class = "navbar-toggler" type = "button" data-toggle = "collapse" data-target = "#Navbar">
-                  <span class = "navbar-toggler-icon"></span>
-              </button>
-              <a class = "navbar-brand" href = "#"><img src="img/ulogo.jpg" height = "30" width = "41"/></a>
-              <div class = "collapse navbar-collapse" id = "Navbar">
-                  <ul class = "navbar-nav mr-auto">
-                      <li class = "nav-item active"><a class = "nav-link" href="#"><span class="fa fa-home fa-lg"></span> Home</a></li>
-                      <li class = "nav-item"><a class = "nav-link" href="about.html"><span class="fa fa-info fa-lg"></span> About</a></li>
-                      <li class = "nav-item"><a class = "nav-link" href="discover.html"><span class="fa fa-rocket fa-lg"></span> Discover</a></li>
-                      <li class = "nav-item"><a class = "nav-link" href="browse.html"><span class="fa fa-bookmark fa-lg"></span> Browse</a></li>
-                  </ul>
-                  <form id = "searchBar" class="form-inline ml-auto">
-                      <div class="md-form my-0">
-                          <input class="form-control" type="text" placeholder="Search" aria-label="Search"/>
-                          <a href = "browse.html"><i class="fa fa-search text-white ml-2" type = "button" href = "browse.html" aria-hidden="true"></i></a>
-                      </div>
-                  </form>
-                  <span class="navbar-text">
-                      <a id = "loginButton">
-                          <span class="fa fa-sign-in"></span> Sign in
-                      </a>
-                  </span>
-              </div>
-          </div>
-      </nav>
-
-      <div id="loginModal" class="modal fade" role = "dialog">
-          <div class="modal-dialog modal-lg" role = "content">
-              <div class="modal-content">
-                  <div class="modal-header">
-                      <h4 class="modal-title">Sign in</h4>
-                      <button id = "loginClose" type = "button" class = "close">
-                          &times;
-                      </button>
-                  </div>
-                  <div class="modal-body">
-                      <form>
-                          <div class="form-row">
-                              <div class="form-group col-sm-4">
-                                      <label class="sr-only" for="exampleInputEmail3">Email address</label>
-                                      <input type="email" class="form-control form-control-sm mr-1" id="exampleInputEmail3" placeholder="Enter email"/>
-                              </div>
-                              <div class="form-group col-sm-4">
-                                  <label class="sr-only" for="exampleInputPassword3">Password</label>
-                                  <input type="password" class="form-control form-control-sm mr-1" id="exampleInputPassword3" placeholder="Password"/>
-                              </div>
-                              <div class="col-sm-auto">
-                                  <div class="form-check">
-                                      <input class="form-check-input" type="checkbox"/>
-                                      <label class="form-check-label"> Remember me
-                                      </label>
-                                  </div>
-                              </div>
-                          </div>
-                          <div class="form-row">
-                              <button id = "newAccount" type="button" class="btn btn-success btn-sm ml-auto">New User</button>
-                              <button id = "loginCancel" type="button" class="btn btn-secondary btn-sm ml-1">Cancel</button>
-                              <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>
-                          </div>
-                      </form>
-                  </div>
-              </div>
-          </div>
-      </div>
+      <NavBar/>
+      <SignIn/>
       <header class = "jumbotron">
           <div class = "container">
               <div class = "row row-header">
@@ -245,36 +190,7 @@ class Home extends React.Component{
           </div>
       </div>
 
-      <footer class = "footer">
-          <div class = "container">
-              <div class = "row">
-                  <div class = "col-8 offset-1">
-                      <h5>Links</h5>
-                      <ul class = "list-unstyled">
-                          <li><a href="#">Home</a></li>
-                          <li><a href="about.html">About</a></li>
-                          <li><a href="discover.html">Discover</a></li>
-                          <li><a href="browse.html">Browse</a></li>
-                      </ul>
-                  </div>
-                  <div class = "col-3 align-self-center">
-                      <div class = "text-center">
-                          <a class = "btn btn-social-icon btn-google" href="http://google.com/+"><i class="fa fa-google-plus fa-lg"></i></a>
-                          <a class = "btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook fa-lg"></i></a>
-                          <a class = "btn btn-social-icon btn-twitter" href="http://www.linkedin.com/in/"><i class="fa fa-linkedin fa-lg"></i></a>
-                          <a class = "btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter fa-lg"></i></a>
-                          <a class = "btn btn-social-icon btn-google" href="http://youtube.com/"><i class="fa fa-youtube fa-lg"></i></a>
-                          <a class = "btn btn-social-icon" href="mailto:"><i class="fa fa-envelope fa-lg"></i></a>
-                      </div>
-                  </div>
-             </div>
-             <div class = "row justify-content-center">
-                  <div class = "col-auto">
-                      <p>© Unscripted</p>
-                  </div>
-             </div>
-          </div>
-      </footer>
+      <Footer/>
       </div>
     )
   }
