@@ -31,6 +31,9 @@
     "pbkdf2-password": "^1.2.1",
     "popper": "^1.0.1"
   },
+  "engines": {
+    "node": "14.2.0"
+  },
   "devDependencies": {
     "nodemon": "^2.0.4"
   }
