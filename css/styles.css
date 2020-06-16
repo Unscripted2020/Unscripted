@@ -61,11 +61,17 @@ body {
 .carousel-caption {
   color: black;
 <<<<<<< HEAD
+<<<<<<< HEAD
   font-size: 128px;
   margin-left: 550px;
   margin-bottom: 80px;
 =======
 >>>>>>> e226dfdaed4dea3b3d43463a546b08756509a57b
+=======
+  font-size: 128px;
+  margin-left: 550px;
+  margin-bottom: 80px;
+>>>>>>> aaf0acf3c472674057fc9eac32ec3ee7f885640c
 }
 
 .carousel .carousel-item {
@@ -102,9 +108,16 @@ body {
   background: #c7d2d5;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 #searchBar {
   margin-right: 30px;
 }
 =======
 >>>>>>> e226dfdaed4dea3b3d43463a546b08756509a57b
+=======
+
+#searchBar {
+  margin-right: 30px;
+}
+>>>>>>> aaf0acf3c472674057fc9eac32ec3ee7f885640c
