@@ -1,13 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import '../App.css';
-
-
-class Home extends React.Component{
-  render(){
-    return(
-      <h1>Test</h1>
-=======
 //css libs
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import '../../node_modules/font-awesome/css/font-awesome.min.css';
@@ -158,7 +149,6 @@ class Home extends React.Component{
 
       <Footer/>
       </div>
->>>>>>> aaf0acf3c472674057fc9eac32ec3ee7f885640c
     )
   }
 }

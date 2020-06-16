@@ -1,11 +1,6 @@
-<<<<<<< HEAD
-const mongoose = require('mongoose');
-const url = "mongodb://localhost:27017/unscripted"
-=======
-require("dotenv").config() 
+require("dotenv").config()
 const mongoose = require('mongoose');
 const url = process.env.MONGODBURL
->>>>>>> aaf0acf3c472674057fc9eac32ec3ee7f885640c
 
 const User = new mongoose.Schema({
   username: {
@@ -20,11 +15,7 @@ const User = new mongoose.Schema({
 mongoose.model('User', User);
 
 //connect db
-<<<<<<< HEAD
-mongoose.connect(url,{
-=======
 mongoose.connect(process.env.MONGODB_URI || url, {
->>>>>>> aaf0acf3c472674057fc9eac32ec3ee7f885640c
 	useNewUrlParser: "true",
 	useUnifiedTopology: "true",
 })
