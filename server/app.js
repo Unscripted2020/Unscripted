@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 5000;
+app.use(express.urlencoded({extended: false}));
 //db
 const mongoose = require('mongoose');
 require("./db.js");//call connection to db and load models
@@ -12,11 +13,13 @@ app.get('/', (req,res) => {
 	res.send("connected to app")
 })
 
-app.post('/login', (req, res) => {
-	const username = "username";
-	const password  = "password";
+app.post('/login', async function(req, res) {
+	const username = req.body.username;
+	const password  = req.body.password;
+	// const username="username"
+	// const password="password"
 	let err = '';
-	User.find({username: username}, (issue, users)=>{
+	await User.find({username: username}, (issue, users)=>{
 		const user = users[0];
 		if(!(username && password)){
 			err = "Please fill in both fields";
@@ -24,27 +27,28 @@ app.post('/login', (req, res) => {
 		else if(!user){
 			err = "Username does not exist";
 		}
-		if(err){
-			res.status(200).json({error: err});
-		}
 		//valid username
 		else{
 			hash({ password: password, salt: user.salt }, function (err, pass, salt, hash) {
 				if(err){
 					err = "Password and Username do not match";
-					res.status(200).json({error: err});
 				}
-        else if (hash === user.hash){
+        else if (hash === user.hash){ //success
 					// req.session.user = user['_id']; add when we add session
-					res.json({'success':true});
 				}
 				else{
 					err = "Password and Username do not match";
-					res.status(200).json({error: err});
 				}
       });
 		}
 	});
+
+	if(err){
+		res.json({error: err});
+	}
+	else{
+		res.json({'success':true});
+	}
 });
 
 app.post('/create-account', (req, res) => {
