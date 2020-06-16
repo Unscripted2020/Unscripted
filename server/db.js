@@ -19,7 +19,7 @@ mongoose.connect(process.env.MONGODB_URI || url, {
 	useNewUrlParser: "true",
 	useUnifiedTopology: "true",
 })
-.then(() => console.log(`connected to database: ${url}`))
+.then(() => console.log('connected to database'))
 .catch(err =>{
 	console.log(err)
 });

@@ -5,12 +5,9 @@
   "main": "app.js",
   "scripts": {
     "start": "node server/app.js",
-<<<<<<< HEAD
-=======
     "build": "cd client && npm run build",
     "install-client": "cd client && npm install",
     "heroku-postbuild": "npm run install-client && npm run build",
->>>>>>> aaf0acf3c472674057fc9eac32ec3ee7f885640c
     "server": "nodemon server/app.js",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\" "
@@ -26,26 +23,19 @@
   },
   "homepage": "https://github.com/Unscripted2020/Unscripted#readme",
   "dependencies": {
-<<<<<<< HEAD
     "concurrently": "^5.2.0",
     "express": "^4.17.1",
     "mongoose": "^5.9.17",
-    "pbkdf2-password": "^1.2.1"
-=======
+    "pbkdf2-password": "^1.2.1",
     "bootstrap": "^4.5.0",
-    "concurrently": "^5.2.0",
     "dotenv": "^8.2.0",
-    "express": "^4.17.1",
     "font-awesome": "^4.7.0",
     "fontawesome": "^5.6.3",
     "jquery": "^3.5.1",
-    "mongoose": "^5.9.17",
-    "pbkdf2-password": "^1.2.1",
     "popper": "^1.0.1"
   },
   "engines": {
     "node": "14.2.0"
->>>>>>> aaf0acf3c472674057fc9eac32ec3ee7f885640c
   },
   "devDependencies": {
     "nodemon": "^2.0.4"
