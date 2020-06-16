@@ -15,7 +15,7 @@ const User = new mongoose.Schema({
 mongoose.model('User', User);
 
 //connect db
-mongoose.connect(url,{
+mongoose.connect(process.env.MONGODB_URI || url, {
 	useNewUrlParser: "true",
 	useUnifiedTopology: "true",
 })

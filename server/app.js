@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = process.env.port || 5000;
+const PORT = process.env.PORT || 5000;
 //db
 const mongoose = require('mongoose');
 require("./db.js");//call connection to db and load models
@@ -97,6 +97,10 @@ app.post('/create-account', (req, res) => {
 
 });
 
-app.listen(port, function(){
-	console.log(`listening on  ${port} `)
+if (process.env.NODE_ENV === 'production') {
+	app.use(express.static('client/build'));
+}
+
+app.listen(PORT, function(){
+	console.log(`listening on  ${PORT} `)
 })
