@@ -19,7 +19,7 @@ import SignIn from './SignIn';
 //helper functions
 import { activateNavBar, initalize} from '../helperFunctions.js';
 
-class About extends React.Component{
+class Creator extends React.Component{
 
   componentDidMount(){
     activateNavBar(1);
@@ -36,7 +36,7 @@ class About extends React.Component{
           <div class = "container">
               <div class = "row row-header">
                   <div class = "col-12">
-                      <h1>About</h1>
+                      <h1>Creator</h1>
                       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex vero consectetur saepe perspiciatis? Provident, doloremque optio dolore voluptatum recusandae dolorum animi quae explicabo, pariatur soluta aut eveniet suscipit sit! Voluptas facilis rem rerum neque repudiandae, impedit animi sint. Saepe, perspiciatis.</p>
                   </div>
               </div>
@@ -49,4 +49,4 @@ class About extends React.Component{
   }
 }
 
-export default About;
+export default Creator;
