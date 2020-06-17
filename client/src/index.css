@@ -17,6 +17,10 @@ code {
 <<<<<<< HEAD
 =======
 } */
+* {
+  color: black;
+}
+
 .row-header {
   margin: 0px auto;
   padding: 0px 0px;
@@ -38,7 +42,7 @@ code {
 .jumbotron {
   margin: 0px auto;
   padding: 70px 30px;
-  background: #90a5ac;
+  background: #476a75;
   color: white;
 }
 
@@ -118,6 +122,16 @@ body {
   background: #c7d2d5;
 }
 
+.fa {
+  color: #90a5ac;
+}
+
 #searchBar {
   margin-right: 30px;
+}
+
+#creator-workspace {
+  background-color: #CCCCCC;
+  height: 60vh;
+  border-radius: 20px;
 }

@@ -40,6 +40,11 @@ class Creator extends React.Component{
                       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex vero consectetur saepe perspiciatis? Provident, doloremque optio dolore voluptatum recusandae dolorum animi quae explicabo, pariatur soluta aut eveniet suscipit sit! Voluptas facilis rem rerum neque repudiandae, impedit animi sint. Saepe, perspiciatis.</p>
                   </div>
               </div>
+              <div class = "row row-header">
+                <div id = "creator-workspace" class = "col-10 offset-1">
+                  
+                </div>
+              </div>
           </div>
       </header>
 
