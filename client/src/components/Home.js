@@ -16,6 +16,7 @@ import NavBar from './Navbar';
 import Footer from './Footer';
 //sign in modal
 import SignIn from './SignIn';
+import SignUp from './SignUp';
 //helper functions
 import { activateNavBar, initalize} from '../helperFunctions.js';
 
@@ -46,6 +47,7 @@ class Home extends React.Component{
       <div>
       <NavBar/>
       <SignIn/>
+      <SignUp/>
       <header class = "jumbotron">
           <div class = "container">
               <div class = "row row-header">
@@ -54,7 +56,7 @@ class Home extends React.Component{
                       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex vero consectetur saepe perspiciatis? Provident, doloremque optio dolore voluptatum recusandae dolorum animi quae explicabo, pariatur soluta aut eveniet suscipit sit! Voluptas facilis rem rerum neque repudiandae, impedit animi sint. Saepe, perspiciatis.</p>
                   </div>
                   <div class="col-3 align-self-center">
-                      <a id = "formButton" role = "button" class = "btn btn-lg btn-block btn-warning nav-link" data-target = "#formModal">Get Started
+                      <a id = "signUpButton" role = "button" class = "btn btn-lg btn-block btn-warning nav-link" data-target = "#signUpModal">Get Started
                       </a>
                   </div>
               </div>

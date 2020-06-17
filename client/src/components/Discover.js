@@ -16,6 +16,7 @@ import NavBar from './Navbar';
 import Footer from './Footer';
 //sign in modal
 import SignIn from './SignIn';
+import SignUp from './SignUp';
 //helper functions
 import { activateNavBar, initalize} from '../helperFunctions.js';
 
@@ -29,6 +30,7 @@ class Discover extends React.Component{
       <div>
       <NavBar/>
       <SignIn/>
+      <SignUp/>
 
 
 
