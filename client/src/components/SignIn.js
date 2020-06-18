@@ -49,8 +49,8 @@ class SignIn extends React.Component{
                       <form>
                           <div class="form-row">
                               <div class="form-group col-sm-4">
-                                      <label class="sr-only" for="exampleInputEmail3">Email address</label>
-                                      <input type="email" class="form-control form-control-sm mr-1" id="usernameInput" placeholder="Enter email"/>
+                                <label class="sr-only" for="exampleInputEmail3">Email address</label>
+                                <input type="email" class="form-control form-control-sm mr-1" id="usernameInput" placeholder="Enter email"/>
                               </div>
                               <div class="form-group col-sm-4">
                                   <label class="sr-only" for="exampleInputPassword3">Password</label>
@@ -62,6 +62,12 @@ class SignIn extends React.Component{
                                       <label class="form-check-label"> Remember me
                                       </label>
                                   </div>
+                              </div>
+                              <div id = "red-box" class="col-sm-8 d-none">
+                                <div>
+                                  <p id = "wrong-credentials">You have entered the wrong username or password</p>
+                                </div>
+                                  
                               </div>
                           </div>
                           <div class="form-row">

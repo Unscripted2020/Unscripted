@@ -135,3 +135,16 @@ body {
   height: 60vh;
   border-radius: 20px;
 }
+
+#wrong-credentials {
+  color: #a60000;
+  margin: auto;
+  width: 80%;
+  padding: 6px;
+}
+
+#red-box {
+  background-color: #ff9494;
+  border: 1px solid gray;
+  border-radius: 6px;
+}
