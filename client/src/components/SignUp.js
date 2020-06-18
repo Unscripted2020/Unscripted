@@ -91,6 +91,16 @@ class SignUp extends React.Component{
                                     </div>
                                 </div>
                             </div>
+                            <div id = "red-signup-box" class="col-sm-8 offset-sm-2 d-none">
+                                <div>
+                                  <p id = "wrong-signup-credentials">That username already exists</p>
+                                </div>
+                            </div>
+                            <div id = "green-signup-box" class="col-sm-8 offset-sm-2 d-none">
+                                <div>
+                                  <p id = "right-signup-credentials">Account created successfully</p>
+                                </div>
+                            </div>
                             <div class="form-row">
                                 <button id = "alreadyUser" type="button" class="btn btn-success btn-sm ml-auto">Already a User?</button>
                                 <button id = "signUpCancel" type="button" class="btn btn-secondary btn-sm ml-1">Cancel</button>

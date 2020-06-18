@@ -69,11 +69,10 @@ class SignIn extends React.Component{
                                       </label>
                                   </div>
                               </div>
-                              <div id="red-box" class="col-sm-8 d-none">
+                              <div id = "red-signin-box" class="col-sm-8 d-none">
                                 <div>
-                                  <p id = "wrong-credentials">You have entered the wrong username or password</p>
+                                  <p id = "wrong-signin-credentials">You have entered the wrong username or password</p>
                                 </div>
-
                               </div>
                           </div>
                           <div class="form-row">
