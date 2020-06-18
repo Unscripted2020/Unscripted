@@ -16,6 +16,7 @@ import NavBar from './Navbar';
 import Footer from './Footer';
 //sign in modal
 import SignIn from './SignIn';
+import SignUp from './SignUp';
 //helper functions
 import { activateNavBar, initalize} from '../helperFunctions.js';
 
@@ -31,6 +32,7 @@ class Creator extends React.Component{
       <NavBar/>
 
       <SignIn/>
+      <SignUp/>
 
       <header class = "jumbotron">
           <div class = "container">

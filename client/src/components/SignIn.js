@@ -16,6 +16,7 @@ class SignIn extends React.Component{
   login(){
     const usernameInput = document.querySelector('#usernameInput');
     const passwordInput = document.querySelector('#passwordInput');
+    const errMsg = document.querySelector('#red-box');
     if(usernameInput.checkValidity() && passwordInput.checkValidity()){
       fetch('login', {
               method: 'POST',
@@ -25,13 +26,18 @@ class SignIn extends React.Component{
           .then(res => res.json())
           .then(res => {
             console.log(res);
+            if(res['error']){
+              errMsg.classList.remove("d-none");
+            }
+            else{
+              window.location.href = "/";
+            }
           })
     }
   }
 
   componentDidMount(){
     const loginButton = document.getElementById('loginBtn');
-    console.log(loginButton);
     loginButton.addEventListener('click', this.login);
   }
   render(){
@@ -49,8 +55,8 @@ class SignIn extends React.Component{
                       <form>
                           <div class="form-row">
                               <div class="form-group col-sm-4">
-                                      <label class="sr-only" for="exampleInputEmail3">Email address</label>
-                                      <input type="email" class="form-control form-control-sm mr-1" id="usernameInput" placeholder="Enter email"/>
+                                <label class="sr-only" for="exampleInputEmail3">Email address</label>
+                                <input type="email" class="form-control form-control-sm mr-1" id="usernameInput" placeholder="Enter email"/>
                               </div>
                               <div class="form-group col-sm-4">
                                   <label class="sr-only" for="exampleInputPassword3">Password</label>
@@ -62,6 +68,11 @@ class SignIn extends React.Component{
                                       <label class="form-check-label"> Remember me
                                       </label>
                                   </div>
+                              </div>
+                              <div id = "red-signin-box" class="col-sm-8 d-none">
+                                <div>
+                                  <p id = "wrong-signin-credentials">You have entered the wrong username or password</p>
+                                </div>
                               </div>
                           </div>
                           <div class="form-row">

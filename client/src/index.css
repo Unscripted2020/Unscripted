@@ -135,3 +135,44 @@ body {
   height: 60vh;
   border-radius: 20px;
 }
+
+#wrong-signin-credentials {
+  color: #a60000;
+  margin: auto;
+  width: 80%;
+  padding: 6px;
+}
+
+#wrong-signup-credentials {
+  color: #a60000;
+  margin: auto;
+  width: 48%;
+  padding: 6px;
+}
+
+#right-signup-credentials {
+  color: #008200;
+  margin: auto;
+  width: 48%;
+  padding: 6px;
+}
+
+#red-signin-box {
+  background-color: #ff9494;
+  border: 1px solid #a60000;
+  border-radius: 6px;
+}
+
+#red-signup-box {
+  background-color: #ff9494;
+  border: 1px solid #a60000;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+#green-signup-box {
+  background-color: #96ff96;
+  border: 1px solid #008200;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
