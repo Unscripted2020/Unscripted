@@ -38,7 +38,6 @@ class SignIn extends React.Component{
 
   componentDidMount(){
     const loginButton = document.getElementById('loginBtn');
-    console.log(loginButton);
     loginButton.addEventListener('click', this.login);
   }
   render(){

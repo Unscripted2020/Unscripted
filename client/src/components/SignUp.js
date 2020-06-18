@@ -12,6 +12,35 @@ import "../../node_modules/bootstrap/dist/js/bootstrap.min.js";
 import $ from 'jquery';
 
 class SignUp extends React.Component{
+  signUp(){
+    const firstName = document.querySelector('#firstNameInput');
+    const lastName = document.querySelector('#lastNameInput');
+    const usernameInput = document.querySelector('#usernameSignUpInput');
+    const passwordInput = document.querySelector('#passwordSignUpInput');
+    const confirmPassword = document.querySelector('#rePasswordInput');
+    //const errMsg = document.querySelector('#red-box');
+    if( firstName.checkValidity() &&lastName.checkValidity() && usernameInput.checkValidity() && passwordInput.checkValidity()){
+      fetch('create-account', {
+              method: 'POST',
+              body: `username=${usernameInput.value}&firstName=${firstName.value}&lastName=${lastName.value}&password=${passwordInput.value}&confirmPassword=${confirmPassword.value}`,
+              headers: { 'Content-type': 'application/x-www-form-urlencoded' }
+            })
+          .then(res => res.json())
+          .then(res => {
+            console.log(res);
+            if(res['error']){
+              //errMsg.classList.remove("d-none");
+            }
+            else{
+              window.location.href = "/";
+            }
+          })
+    }
+  }
+  componentDidMount(){
+    const signUpButton = document.getElementById('signUpBtn');
+    signUpButton.addEventListener('click', this.signUp);
+  }
   render(){
     return(
         <div id="signUpModal" class="modal fade" role = "dialog">
@@ -29,7 +58,7 @@ class SignUp extends React.Component{
                                 <div class="form-group col-sm-4 offset-sm-2">
                                     <label class="sr-only">First Name</label>
                                     <input type="text" class="form-control form-control-sm mr-1" id="firstNameInput" placeholder="First Name"/>
-                                    
+
                                 </div>
                                 <div class = "form-group col-sm-4">
                                     <label class="sr-only">Last Name</label>
@@ -38,14 +67,14 @@ class SignUp extends React.Component{
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-sm-8 offset-sm-2">
-                                    <label class="sr-only" for="exampleInputEmail3">Email address</label>
-                                    <input type="email" class="form-control form-control-sm mr-1" id="usernameInput" placeholder="Enter email"/>
+                                    <label class="sr-only" >Email address</label>
+                                    <input type="email" class="form-control form-control-sm mr-1" id="usernameSignUpInput" placeholder="Enter email"/>
                                 </div>
                             </div>
                             <div class = "form-row">
                                 <div class="form-group col-sm-8 offset-sm-2">
                                     <label class="sr-only">Password</label>
-                                    <input type="password" class="form-control form-control-sm mr-1" id="passwordInput" placeholder="Password"/>
+                                    <input type="password" class="form-control form-control-sm mr-1" id="passwordSignUpInput" placeholder="Password"/>
                                 </div>
                             </div>
                             <div class = "form-row">

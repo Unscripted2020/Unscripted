@@ -52,19 +52,21 @@ app.post('/login', async function(req, res) {
 
 });
 
-app.post('/create-account', (req, res) => {
-	const username = "username@gmail.com";
-	const password  = "password";
-	const confirmPassword = "password";
+app.post('/create-account', async function(req, res) {
+	const username = req.body.username;
+	const firstName = req.body.firstName;
+	const lastName = req.body.lastName;
+	const password  = req.body.password;
+	const confirmPassword = req.body.confirmPassword;
 	let err = "";
-	User.find({username: username}, (issue, users)=>{
+	await User.find({username: username}, (issue, users)=>{
     if(users[0]){
 			err = "Username exists";
-			res.status(200).json({error: err});
+			return res.status(200).json({error: err});
 		}
 		//new user
 		else{
-			if(!(username && password && confirmPassword)){
+			if(!(firstName && lastName && username && password && confirmPassword)){
 				err = "All fields must be filled";
 			}
 			else if(username === password){
@@ -77,22 +79,24 @@ app.post('/create-account', (req, res) => {
 				err = "Password must be at least 8 characters long";
 			}
 			if(err){
-				res.status(200).json({error: err});
+				return res.status(200).json({error: err});
 			}
 			else{
 				hash({ password: password }, function (err, pass, salt, hash) {
 			    if (err) throw err;
 			    // store the salt & hash in the "db"
 					new User({
+						firstName: firstName,
+						lastName: lastName,
 			      username: username,
 						salt: salt,
 			      hash: hash
 			    }).save(function(err){
 			      if(err){
-			        res.json({'error': 'Error saving data'})
+			        return res.json({'error': 'Error saving data'})
 			      }
 			      else{
-			        res.json({'success': true});
+			        return res.json({'success': true});
 			      }
 			    });
 			  });
