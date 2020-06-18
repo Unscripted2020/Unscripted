@@ -16,6 +16,7 @@ class SignIn extends React.Component{
   login(){
     const usernameInput = document.querySelector('#usernameInput');
     const passwordInput = document.querySelector('#passwordInput');
+    const errMsg = document.querySelector('#red-box');
     if(usernameInput.checkValidity() && passwordInput.checkValidity()){
       fetch('login', {
               method: 'POST',
@@ -25,6 +26,12 @@ class SignIn extends React.Component{
           .then(res => res.json())
           .then(res => {
             console.log(res);
+            if(res['error']){
+              errMsg.classList.remove("d-none");
+            }
+            else{
+              window.location.href = "/";
+            }
           })
     }
   }
@@ -63,11 +70,11 @@ class SignIn extends React.Component{
                                       </label>
                                   </div>
                               </div>
-                              <div id = "red-box" class="col-sm-8 d-none">
+                              <div id="red-box" class="col-sm-8 d-none">
                                 <div>
                                   <p id = "wrong-credentials">You have entered the wrong username or password</p>
                                 </div>
-                                  
+
                               </div>
                           </div>
                           <div class="form-row">
