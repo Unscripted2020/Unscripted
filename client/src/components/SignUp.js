@@ -18,7 +18,9 @@ class SignUp extends React.Component{
     const usernameInput = document.querySelector('#usernameSignUpInput');
     const passwordInput = document.querySelector('#passwordSignUpInput');
     const confirmPassword = document.querySelector('#rePasswordInput');
-    //const errMsg = document.querySelector('#red-box');
+    const errMsg = document.querySelector('#red-signup-box');
+    const errText = document.querySelector('#wrong-signup-credentials');
+    const successMsg = document.querySelector('#green-signup-box');
     if( firstName.checkValidity() &&lastName.checkValidity() && usernameInput.checkValidity() && passwordInput.checkValidity()){
       fetch('create-account', {
               method: 'POST',
@@ -27,12 +29,14 @@ class SignUp extends React.Component{
             })
           .then(res => res.json())
           .then(res => {
-            console.log(res);
+            errMsg.classList.add("d-none");
+            successMsg.classList.add("d-none");
             if(res['error']){
-              //errMsg.classList.remove("d-none");
+              errText.textContent = res['error'];
+              errMsg.classList.remove("d-none");
             }
             else{
-              window.location.href = "/";
+              successMsg.classList.remove("d-none");
             }
           })
     }
