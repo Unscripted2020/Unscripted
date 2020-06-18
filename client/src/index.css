@@ -136,15 +136,29 @@ body {
   border-radius: 20px;
 }
 
-#wrong-credentials {
+#wrong-signin-credentials {
   color: #a60000;
   margin: auto;
   width: 80%;
   padding: 6px;
 }
 
-#red-box {
+#wrong-signup-credentials {
+  color: #a60000;
+  margin: auto;
+  width: 48%;
+  padding: 6px;
+}
+
+#red-signin-box {
   background-color: #ff9494;
   border: 1px solid gray;
   border-radius: 6px;
+}
+
+#red-signup-box {
+  background-color: #ff9494;
+  border: 1px solid gray;
+  border-radius: 6px;
+  margin-bottom: 10px;
 }
