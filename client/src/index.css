@@ -222,3 +222,7 @@ body {
 #myfile {
   width: 210px;
 }
+
+#fileSelect {
+  margin-bottom: 40px;
+}

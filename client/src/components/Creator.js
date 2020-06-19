@@ -60,6 +60,9 @@ class Creator extends React.Component{
                 </div>
               </div>
               <div id = "submitFile" class = "submitFile jumbotron">
+                <h2 id = "fileSelect">
+                  <u>Select File from Computer</u>
+                </h2>
                 <form>
                   <label id = "selectFile" for="myfile">Select a file:</label>
                   <input type="file" id="myfile" name="myfile"></input>
