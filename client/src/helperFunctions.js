@@ -1,4 +1,5 @@
 import $ from 'jquery';
+
 export function initalize(){
     /*document.getElementById("#loginButton").addEventListener("click", function() {
         document.getElementById("#loginModal").addClass("show");

@@ -134,6 +134,14 @@ body {
   background-color: #CCCCCC;
   height: 60vh;
   border-radius: 20px;
+  border: 3px solid #476a75;
+}
+
+.paste-text {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
 }
 
 #wrong-signin-credentials {
@@ -175,4 +183,42 @@ body {
   border: 1px solid #008200;
   border-radius: 6px;
   margin-bottom: 10px;
+}
+
+.creator-link {
+  border-radius: 5px;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.jumbotron .container .jumbotron {
+  background-color: #476a75;
+  padding: 25px 50px 100px 50px;
+}
+
+.video-link-label {
+  color: white;
+  margin: 0;
+}
+
+.video-link-label-wrapper {
+  text-align: center;
+}
+
+#selectFile {
+  margin-right: 5px;
+}
+
+.jumbotron .container #submitFile {
+  margin-top: 50px;
+  background-color: #CCCCCC;
+  border: 3px solid #476a75;
+  text-align: center;
+}
+
+#myfile {
+  width: 210px;
 }
