@@ -18,7 +18,7 @@ import Footer from './Footer';
 import SignIn from './SignIn';
 import SignUp from './SignUp';
 //helper functions
-import { activateNavBar, initalize} from '../helperFunctions.js';
+import { activateNavBar, initalize,} from '../helperFunctions.js';
 
 class Creator extends React.Component{
 
@@ -42,14 +42,35 @@ class Creator extends React.Component{
                       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex vero consectetur saepe perspiciatis? Provident, doloremque optio dolore voluptatum recusandae dolorum animi quae explicabo, pariatur soluta aut eveniet suscipit sit! Voluptas facilis rem rerum neque repudiandae, impedit animi sint. Saepe, perspiciatis.</p>
                   </div>
               </div>
+              <div class = "jumbotron">
+                <div class = "row row-header">
+                  <div class = "col-12">
+                    <div class = "video-link-label-wrapper">
+                      <h2 class = "video-link-label">Paste Video Link</h2><br></br>
+                    </div>
+                    <input class="form-check-input creator-link" type="text" placeholder = "Enter YouTube URL"/>
+                  </div>
+                </div>
+              </div>
               <div class = "row row-header">
                 <div id = "creator-workspace" class = "col-10 offset-1">
-                  
+                  <div class = "paste-text">
+                    <p>Drag and drop a video file into this area</p>
+                  </div>
                 </div>
+              </div>
+              <div id = "submitFile" class = "submitFile jumbotron">
+                <h2 id = "fileSelect">
+                  <u>Select File from Computer</u>
+                </h2>
+                <form>
+                  <label id = "selectFile" for="myfile">Select a file:</label>
+                  <input type="file" id="myfile" name="myfile"></input>
+                  <input type="submit" value="Submit"></input>
+                </form>
               </div>
           </div>
       </header>
-
       <Footer/>
       </div>
     )

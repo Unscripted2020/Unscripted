@@ -1,5 +1,42 @@
 import $ from 'jquery';
+
 export function initalize(){
+    /*document.getElementById("#loginButton").addEventListener("click", function() {
+        document.getElementById("#loginModal").addClass("show");
+        document.getElementById("#loginModal").removeClass("hide");
+    });
+    document.getElementById("#loginClose").addEventListener("click", function() {
+        document.getElementById("#loginModal").addClass("hide");
+        document.getElementById("#loginModal").removeClass("show");
+    });
+    document.getElementById("#loginCancel").addEventListener("click", function() {
+        document.getElementById("#loginModal").addClass("hide");
+        document.getElementById("#loginModal").removeClass("show");
+    });
+    document.getElementById("#signUpButton").addEventListener("click", function() {
+        document.getElementById("#signUpModal").addClass("show");
+        document.getElementById("#signUpModal").removeClass("hide");
+    });
+    document.getElementById("#signUpClose").addEventListener("click", function() {
+        document.getElementById("#signUpModal").addClass("hide");
+        document.getElementById("#signUpModal").removeClass("show");
+    });
+    document.getElementById("#signUpCancel").addEventListener("click", function() {
+        document.getElementById("#signUpModal").addClass("hide");
+        document.getElementById("#signUpModal").removeClass("show");
+    });
+    document.getElementById("#newAccount").addEventListener("click", function() {
+        document.getElementById("#loginModal").addClass("hide");
+        document.getElementById("#loginModal").removeClass("show");
+        document.getElementById("#signUpModal").addClass("show");
+        document.getElementById("#signUpModal").removeClass("hide");
+    });
+    document.getElementById("#alreadyUser").addEventListener("click", function() {
+        document.getElementById("#loginModal").addClass("show");
+        document.getElementById("#loginModal").removeClass("hide");
+        document.getElementById("#signUpModal").addClass("hide");
+        document.getElementById("#signUpModal").removeClass("show");
+    });*/
     $(document).ready(function(){
         $("#loginButton").click(function(){
             $("#loginModal").modal('show');
