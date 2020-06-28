@@ -22,10 +22,12 @@
   },
   "homepage": "https://github.com/Unscripted2020/Unscripted#readme",
   "dependencies": {
+    "@popperjs/core": "^2.4.2",
     "babel-eslint": "^10.1.0",
     "bootstrap": "^4.5.0",
     "concurrently": "^5.2.0",
     "dotenv": "^8.2.0",
+    "eslint": "^7.3.1",
     "express": "^4.17.1",
     "font-awesome": "^4.7.0",
     "fontawesome": "^5.6.3",
@@ -33,12 +35,14 @@
     "jquery": "^3.5.1",
     "mongoose": "^5.9.19",
     "pbkdf2-password": "^1.2.1",
-    "popper": "^1.0.1"
+    "popper": "^1.0.1",
+    "popper.js": "^1.16.1"
   },
   "engines": {
     "node": "14.2.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.4"
+    "nodemon": "^2.0.4",
+    "pm2": "^4.4.0"
   }
 }
