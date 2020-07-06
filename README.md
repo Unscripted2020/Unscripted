@@ -29,5 +29,5 @@ $ npm run dev
 * [Ahmad Amali](https://github.com/AhmadAmali)
 * [Santiago Rendon](https://github.com/santiagorendon)
 * [Ryan Cohen](https://github.com/ryanjcohen)
-* [shadowrider38](https://github.com/shadowrider38)
+* [Connor Wang](https://github.com/shadowrider38)
 * [gaf](https://github.com/youngGaf)
