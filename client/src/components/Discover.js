@@ -26,13 +26,13 @@ class Discover extends React.Component{
     initalize();
   }
   render(){
+    const categories = [[["Math", "fa-calculator", "/discover/math"], ["Physics", "fa-thermometer", "/discover/physics"]], [["Chemistry", "fa-flask", "/discover/chemistry"], ["Art", "fa-paint-brush"]], [["History", "fa-book", "/discover/history"], ["", "", ""]]];
+
     return(
       <div>
       <NavBar/>
       <SignIn/>
       <SignUp/>
-
-
 
       <header class = "jumbotron">
           <div class = "container">
@@ -44,7 +44,34 @@ class Discover extends React.Component{
               </div>
           </div>
       </header>
-
+      {categories.map(category => (
+        <div key={category}>
+          <div className="row">
+            <div className="container col-6">
+              <div className="card">
+                <div className="card-icon">
+                  <i className={`fa ${category[0][1]} card-icon`}></i>
+                </div>          
+                <div className="card-icon">
+                  <h4 className="card-title">{category[0][0]}</h4>
+                </div>
+                <a href="#" class="stretched-link"></a>
+              </div>
+            </div>
+            <div className="container col-6">
+              <div className="card">
+                <div className="card-icon">
+                  <i className={`fa ${category[1][1]} card-icon`}></i>
+                </div>          
+                <div className="card-icon">
+                  <h4 className="card-title">{category[1][0]}</h4>
+                </div>
+                <a href="#" class="stretched-link"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      ))}
       <Footer/>
       </div>
     )
