@@ -17,7 +17,7 @@ module.exports = {
 
   deploy : {
     production : {
-      key  : '/home/ec2-user/',
+      key  : '~/Unscriptedkeyname.pem',
       user : 'ec2-user',
       host : 'ec2-18-217-46-116.us-east-2.compute.amazonaws.com',
       ref  : 'origin/master',
