@@ -17,14 +17,14 @@ module.exports = {
 
   deploy : {
     production : {
-      key  : '~/Desktop/Unscriptedkeyname.pem',
+      key  : '~/Unscriptedkeyname.pem',
       user : 'ec2-user',
       host : 'ec2-18-217-46-116.us-east-2.compute.amazonaws.com',
       ref  : 'origin/master',
       repo : 'git@github.com:Unscripted2020/Unscripted.git',
       path : '/home/ec2-user',
       'pre-deploy-local': '',
-      'post-deploy' : 'npm install && pm2 reload ecosystem.config.js --env production',
+      'post-deploy' : 'npm install',
       'pre-setup': ''
     }
   }
