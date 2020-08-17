@@ -226,3 +226,8 @@ body {
 #fileSelect {
   margin-bottom: 40px;
 }
+
+.card-icon {
+  font-size: 250px;
+  text-align: center;
+}
